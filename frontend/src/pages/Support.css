@@ -1,0 +1,475 @@
+.support-page {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.support-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.support-header h1 {
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.tab-navigation {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  padding: 0.75rem 2rem;
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.tab-btn:hover {
+  background: var(--background);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.tab-btn.active {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+}
+
+.tab-content {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.search-bar {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.search-input {
+  flex: 1;
+  padding: 1rem;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.search-btn {
+  padding: 1rem 2rem;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.search-btn:hover {
+  background: var(--primary-dark);
+}
+
+.specialists-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.specialist-card {
+  background: var(--surface);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px var(--shadow);
+  border: 1px solid var(--border);
+  transition: box-shadow 0.3s;
+}
+
+.specialist-card:hover {
+  box-shadow: 0 4px 16px var(--shadow-hover);
+}
+
+.specialist-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.specialist-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.specialist-info {
+  flex: 1;
+  min-width: 200px;
+}
+
+.specialist-info h3 {
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.specialty {
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stars {
+  color: #f59e0b;
+  font-weight: 600;
+}
+
+.review-count {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.specialist-status {
+  margin-left: auto;
+}
+
+.status-badge {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.status-badge.accepting {
+  background: rgba(80, 200, 120, 0.2);
+  color: var(--secondary-color);
+}
+
+.status-badge.not-accepting {
+  background: rgba(156, 163, 175, 0.2);
+  color: #6b7280;
+}
+
+.specialist-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  background: var(--background);
+  border-radius: 8px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+}
+
+.detail-icon {
+  font-size: 1.2rem;
+}
+
+.specialist-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.view-profile-btn,
+.book-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: none;
+}
+
+.view-profile-btn {
+  background: var(--surface);
+  color: var(--text-primary);
+  border: 2px solid var(--border);
+}
+
+.view-profile-btn:hover {
+  background: var(--background);
+  border-color: var(--primary-color);
+}
+
+.book-btn {
+  background: var(--primary-color);
+  color: white;
+}
+
+.book-btn:hover {
+  background: var(--primary-dark);
+}
+
+.roadmap-section {
+  background: var(--surface);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+.roadmap-section h2 {
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.roadmap-intro {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.roadmap-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.roadmap-step {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.step-number {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.step-content {
+  flex: 1;
+  padding: 1.5rem;
+  background: var(--background);
+  border-radius: 8px;
+  border-left: 4px solid var(--primary-color);
+}
+
+.step-content h3 {
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.step-content p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.step-action {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.step-action:hover {
+  background: var(--primary-dark);
+}
+
+.info-box {
+  padding: 1rem;
+  background: rgba(74, 144, 226, 0.1);
+  border-radius: 6px;
+  border-left: 3px solid var(--primary-color);
+  margin-top: 1rem;
+}
+
+.conversation-starters {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: rgba(80, 200, 120, 0.05);
+  border-radius: 12px;
+  border: 2px solid rgba(80, 200, 120, 0.2);
+}
+
+.conversation-starters h3 {
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+
+.starter-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.starter-card {
+  padding: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px var(--shadow);
+}
+
+.starter-card h4 {
+  color: var(--primary-color);
+  margin-bottom: 0.75rem;
+}
+
+.starter-card p {
+  color: var(--text-secondary);
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.resources-section {
+  background: var(--surface);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+.resources-section h2 {
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.resource-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.resource-category {
+  background: var(--background);
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.resource-category h3 {
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.resource-list {
+  list-style: none;
+  padding: 0;
+}
+
+.resource-list li {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.resource-list li:last-child {
+  border-bottom: none;
+}
+
+.resource-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.resource-link:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+.resource-list p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-top: 0.25rem;
+  line-height: 1.4;
+}
+
+.resource-list strong {
+  color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .support-page {
+    padding: 1rem;
+  }
+
+  .specialist-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .specialist-status {
+    margin-left: 0;
+  }
+
+  .specialist-actions {
+    flex-direction: column;
+  }
+
+  .specialist-actions button {
+    width: 100%;
+  }
+
+  .roadmap-step {
+    flex-direction: column;
+  }
+
+  .resource-categories {
+    grid-template-columns: 1fr;
+  }
+}
