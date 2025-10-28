@@ -104,6 +104,28 @@ PORT=5000
 NODE_ENV=development
 ```
 
+### Frontend (production)
+For production builds the frontend reads Vite variables from `.env.production` during the build step.
+
+Create or update `frontend/.env.production` with:
+```
+VITE_API_URL=https://cognicare-back.vercel.app
+```
+
+When you build/deploy the frontend (for example to Vercel), Vite will embed the value above and the running frontend will send API requests to the specified backend.
+
+### Optional: test against remote backend during local dev
+If you want your local dev server to proxy API calls to the deployed backend (instead of your local backend), set the `DEV_PROXY` environment variable before starting Vite:
+
+```bash
+# Example: use the deployed backend during development
+export DEV_PROXY=https://cognicare-back.vercel.app
+npm run dev
+```
+
+The dev server will use `DEV_PROXY` (or `VITE_API_URL`) as the proxy target. If neither is set it will default to `http://localhost:5050`.
+
+
 ## Tech Stack
 
 ### Backend
